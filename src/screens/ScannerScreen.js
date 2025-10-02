@@ -12,12 +12,11 @@ import PermissionPage from '../components/PermissionPage';
 import { useIsFocused } from '@react-navigation/native';
 import { useIsForeground } from '../hooks/useIsForeground';
 import { SAFE_AREA_PADDING } from '../constant';
+import { ScannerOverlay } from '../components/ScannerOverlay';
 
 const ScannerScreen = ({ navigation }) => {
   // Hooks
   const { hasPermission, requestPermission } = useCameraPermission();
-
-  console.log('req per', requestPermission);
 
   const device = useCameraDevice('back');
 
@@ -29,8 +28,6 @@ const ScannerScreen = ({ navigation }) => {
   const isScanProcessed = useRef(false);
 
   const onCodeScanned = useCallback(codes => {
-    console.log('codes', codes);
-
     if (isScanProcessed.current) {
       return;
     }
@@ -71,6 +68,7 @@ const ScannerScreen = ({ navigation }) => {
     }
   }, [isFocused]);
 
+  // Checks specific to rn vision camera
   if (hasPermission === null) {
     return null;
   }
@@ -96,8 +94,11 @@ const ScannerScreen = ({ navigation }) => {
           enableZoomGesture={true}
         />
       )}
+
+      <ScannerOverlay />
+
       <Pressable onPress={navigation.goBack} style={styles.backButton}>
-        <Text>⏪</Text>
+        <Text style={{ color: '#fff', fontSize: 32 }}>X</Text>
       </Pressable>
     </View>
   );

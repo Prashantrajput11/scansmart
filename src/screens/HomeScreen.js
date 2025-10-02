@@ -3,14 +3,12 @@ import React from 'react';
 
 const HomeScreen = ({ navigation }) => {
   return (
-    <View>
-      <Text>HomeScreen</Text>
-
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Pressable
         style={styles.button}
         onPress={() => navigation.navigate('Scanner')}
       >
-        <Text style={styles.buttonText}>Scan My Bar code</Text>
+        <Text style={styles.buttonText}>Scan code</Text>
       </Pressable>
     </View>
   );
@@ -20,7 +18,7 @@ export default HomeScreen;
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: 'tomato',
     paddingVertical: 12,
     paddingHorizontal: 20,
     borderRadius: 8,
