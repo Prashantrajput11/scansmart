@@ -1,4 +1,4 @@
-React Native QR/Barcode Scanner App
+**React Native QR/Barcode Scanner App**
 This is a simple, high-performance QR and Barcode scanner application built with React Native. It uses react-native-vision-camera for a fast, native camera experience. The primary functionality is to scan a specific code ("login123") to navigate to a success screen or show an error for any other code.
 
 Features
@@ -19,7 +19,6 @@ Watchman (for macOS users)
 
 Xcode (for running on iOS)
 
-Android Studio and Android SDK (for running on Android)
 
 For a detailed guide on setting up your environment, please follow the official React Native documentation: Setting up the development environment.
 
@@ -35,25 +34,16 @@ cd your-repository-name
 2. Install Dependencies
 This project uses npm to manage dependencies. Run the following command in the root directory of the project to install all the required packages from package.json.
 
-npm install
+**npm install**
 
 For iOS, you also need to install the CocoaPods dependencies.
 
 cd ios && pod install && cd ..
 
-▶️ How to Run the App
+▶️ **How to Run the App**
 Make sure you have a simulator/emulator running or a physical device connected to your computer.
 
-Running on Android
-Connect a Device: Ensure you have an Android emulator running or a physical device connected with USB debugging enabled.
-
-Start the Metro Server: The run-android command will automatically start the Metro bundler.
-
-Run the Command: In your project's root directory, run:
-
-npx react-native run-android
-
-The app will build, install, and launch on your Android device or emulator.
+**NOTE : try to run on an actual physcial device since simulators sometimes cant find camera devices**
 
 Running on iOS
 Connect a Device: Ensure you have an iOS Simulator open or a physical iPhone connected.
@@ -62,7 +52,7 @@ Start the Metro Server: The run-ios command will automatically start the Metro b
 
 Run the Command: In your project's root directory, run:
 
-npx react-native run-ios
+**npx react-native run-ios**
 
 The app will build, install, and launch on your iOS device or simulator. If you are running on a physical device, you may need to trust the developer in your device's settings.
 
