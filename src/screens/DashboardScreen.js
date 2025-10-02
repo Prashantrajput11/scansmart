@@ -1,10 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 
-const DashboardScreen = () => {
+const DashboardScreen = ({ route }) => {
+  const { scannedCode } = route.params;
+
   return (
     <View>
-      <Text>DashboardScreen</Text>
+      <Text>${`DashboardScreen Your barcode QR code is ${scannedCode}`}</Text>
     </View>
   );
 };
