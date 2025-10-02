@@ -10,6 +10,8 @@ Custom Overlay: Features a clean, centered scanner view with a blurred backgroun
 
 Specific Code Validation: Navigates to a dashboard on a successful scan of "login123" and provides user feedback for invalid codes.
 
+
+
 Prerequisites
 Before you begin, ensure you have your development environment set up for React Native. This includes:
 
